@@ -26,13 +26,13 @@ crate-type = ["rlib", "dylib"]
 
 [dependencies]
 tokio = { version = "1.38.0", features = [
-  "io-util",
-  "sync",
-  "rt",
-  "rt-multi-thread",
-  "net",
-  "time",
-  "macros",
+    "io-util",
+    "sync",
+    "rt",
+    "rt-multi-thread",
+    "net",
+    "time",
+    "macros",
 ] }
 tokio-util = { version = "0.7.11", features = ["codec", "compat"] }
 futures = "0.3"
@@ -52,15 +52,17 @@ dirs = "5.0"
 strum = "0.26"
 strum_macros = "0.26"
 
+deucalion-libs = { path = "../deucalion-libs" }
+
 [target.'cfg(windows)'.dependencies]
 winapi = { version = "0.3", features = [
-  "minwindef",
-  "minwinbase",
-  "processthreadsapi",
-  "libloaderapi",
-  "consoleapi",
-  "wincon",
-  "tlhelp32",
+    "minwindef",
+    "minwinbase",
+    "processthreadsapi",
+    "libloaderapi",
+    "consoleapi",
+    "wincon",
+    "tlhelp32",
 ] }
 
 [dev-dependencies]

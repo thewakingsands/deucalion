@@ -17,6 +17,8 @@ use winapi::um::consoleapi;
 #[cfg(debug_assertions)]
 use winapi::um::wincon;
 
+pub use deucalion_libs::*;
+
 use std::sync::Arc;
 
 use anyhow::{format_err, Context, Result};
@@ -27,9 +29,7 @@ use tokio::sync::oneshot;
 mod hook;
 mod w32module;
 
-pub mod namedpipe;
 pub mod procloader;
-pub mod rpc;
 
 mod server;
 
